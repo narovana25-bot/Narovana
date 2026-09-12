@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#3157d5">
+<title>DAD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav class="topbar">
+  <div class="brand">MYRIAME INFO</div>
+  <div class="nav">
+    <a href="Index.html">Accueil</a>
+    <a href="famille.html">Famille</a>
+    <button class="theme-btn" type="button" onclick="toggleTheme()" aria-label="Changer le thème">☾ / ☀</button>
+  </div>
+</nav>
+
+<div class="card">
+  <div class="back"><a href="famille.html">← Retour</a></div>
+  <h2 id="Dad">DAD</h2>
+  <div class="person"><img src="zo.jpg" alt=""></div>
+  <section>
+    <h3>Contact</h3>
+    <ul class="contact-list">
+      <li><p>Phone number: <a href="sms:+261344314461">0344314461</a></p></li>
+      <li><p>Facebook : <a href="https://www.facebook.com/hajaniaina.mamelina.zo.andriantsatamalala">Zo Andriantsatamalala</a></p></li>
+    </ul>
+  </section>
+</div>
+</main>
+
+<script>
+(function(){
+  const saved=localStorage.getItem('myriame-theme');
+  if(saved) document.documentElement.setAttribute('data-theme',saved);
+})();
+function toggleTheme(){
+  const html=document.documentElement;
+  const next=html.getAttribute('data-theme')==='dark'?'light':'dark';
+  html.setAttribute('data-theme',next);
+  localStorage.setItem('myriame-theme',next);
+}
+</script>
+
+</body>
+</html>
